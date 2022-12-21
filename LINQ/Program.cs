@@ -1,10 +1,16 @@
-﻿namespace LINQ
+﻿
+
+List<string> names = new List<string>() 
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    "Sweater Weather", "Pure White", "Shiitake", "Pewter Green" 
+};
+
+
+IEnumerable<string> sortedList = names.OrderByDescending(x => x.Length);
+
+
+
+foreach (var item in sortedList)
+{
+    Console.WriteLine(item);
 }
